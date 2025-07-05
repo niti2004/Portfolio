@@ -1,0 +1,256 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-theme {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  border-bottom: 2px solid #E50914;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E50914;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: #B0B0B0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #E50914;
+  border-bottom: 2px solid #E50914;
+  padding-bottom: 4px;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.typewriter {
+  font-size: 2rem;
+  color: #E50914;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #E50914;
+  animation: blinkCursor 0.75s step-end infinite;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: #E50914; }
+}
+
+.content-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  color: #E50914;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #B0B0B0;
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-red {
+  background-color: #E50914;
+  padding: 0.9rem 1.8rem;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-light {
+  background-color: #FFC6C6;
+  color: #000;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skill-pill {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #FFC6C6;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  border: 1px solid #444;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.contact-btn {
+  font-size: 1.1rem;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border: 2px solid #E50914;
+  border-radius: 8px;
+  color: #fff;
+  width: fit-content;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===================== */
+/* 👩🏻‍💻 PROJECTS PAGE STYLING */
+/* ===================== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.3);
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.project-images img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.03);
+}
+
+.project-content h3 {
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.project-content p {
+  color: #B0B0B0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.tech-tags {
+  margin-bottom: 1rem;
+}
+
+.tech-tags span {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #FFC6C6;
+  padding: 6px 12px;
+  margin: 4px 4px 0 0;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  border: 1px solid #444;
+}
+
+.project-content a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #E50914;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-content a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-images img {
+    max-width: 100%;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+}

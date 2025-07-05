@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niti Agnihotri | ML Portfolio</title>
+
+  <!-- SEO + Social Meta Tags -->
+  <meta name="description" content="Machine learning portfolio by Niti Agnihotri — featuring projects in NLP, CNN, and real-world AI apps." />
+  <meta name="keywords" content="Niti Agnihotri, AIML portfolio, machine learning intern, CNN, NLP, GitHub, projects">
+  <meta property="og:title" content="Niti Agnihotri | ML Portfolio" />
+  <meta property="og:description" content="Explore machine learning projects by Niti Agnihotri — from NLP and CNNs to real-world applications." />
+  <meta property="og:image" content="assets/preview.png" />
+
+  <!-- Styling & Icons -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Script -->
+  <script defer src="script.js"></script>
+
+  <style>
+    body.dark-theme {
+      background: radial-gradient(circle at top left, #0d0d0d, #000);
+    }
+
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 120px);
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+      max-width: 100vw;
+      line-height: 1.4;
+      color: #E50914;
+      margin-bottom: 1.5rem;
+      white-space: nowrap;
+      overflow: visible;
+    }
+
+    .hero-section p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      color: #B0B0B0;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-red, .btn-light {
+      padding: 0.9rem 1.8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-red:hover, .btn-light:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+
+    .btn-red {
+      background: #E50914;
+      color: #fff;
+    }
+
+    .btn-light {
+      background: #FFC6C6;
+      color: #000;
+    }
+
+    #typewriter-text::after {
+      content: '|';
+      animation: blink 1s infinite;
+      color: #E50914;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .scroll-cue {
+      font-size: 2rem;
+      color: #E50914;
+      margin-top: 2.5rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section h1 { font-size: 1.5rem; }
+      .hero-section p { font-size: 1rem; }
+    }
+
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="dark-theme">
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">Niti Agnihotri</a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <h1 class="typewriter" id="typewriter-text">I turn data into intuition. I don’t code models. I craft intelligence.</h1>
+    <p>I’m <strong>Niti Agnihotri</strong> — an AIML undergrad who doesn’t just run algorithms, but asks the right questions first.</p>
+    <div class="cta-buttons">
+      <a href="projects.html" class="btn-red">Explore the Work</a>
+      <a href="assets/Niti_Resume.pdf" class="btn-light" target="_blank">View Resume</a>
+    </div>
+    <div class="scroll-cue">&#8595;</div>
+  </header>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Niti Agnihotri • Built with Python, Passion & Purpose.
+  </footer>
+
+</body>
+</html>
