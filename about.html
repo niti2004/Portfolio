@@ -3,94 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About • Niti</title>
+  <title>Contact • Niti Agnihotri</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <meta name="description" content="Connect with Niti Agnihotri for collaborations, internships, or AI/ML opportunities." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    .timeline {
-      border-left: 2px solid #E50914;
-      padding-left: 1rem;
-      margin-top: 2rem;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .timeline-entry {
-      margin-bottom: 1.5rem;
+
+    body.dark-theme {
+      background: radial-gradient(circle at top left, #0d0d0d, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
     }
-    .timeline-entry h4 {
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #111;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
       color: #E50914;
-      margin-bottom: 0.3rem;
     }
-    .animated-card {
-      background-color: #111;
-      border: 1px solid #333;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+      transition: max-height 0.3s ease;
     }
-    .animated-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(255, 0, 0, 0.2);
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem;
+    }
+
+    nav ul li a.active {
+      color: #E50914;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #E50914;
+    }
+
+    .content-section {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .content-section h1 {
+      font-size: 2rem;
+      color: #E50914;
+      margin-bottom: 1rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1.2rem;
+      color: #ccc;
+    }
+
+    .content-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #bbb;
+    }
+
+    .contact-links p {
+      font-weight: 500;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #eee;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      background: #E50914;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      background: #c40810;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background: #111;
+        text-align: center;
+      }
+
+      nav ul.show {
+        max-height: 300px;
+        margin-top: 1rem;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .content-section {
+        padding: 1.5rem 1rem;
+        text-align: center;
+      }
+
+      .content-section h1 {
+        font-size: 1.5rem;
+      }
+
+      .content-section h2 {
+        font-size: 1rem;
+      }
+
+      .content-section p {
+        font-size: 0.95rem;
+      }
+
+      .contact-btn {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body class="dark-theme">
 
+  <!-- Navigation -->
   <nav>
     <div class="logo">Niti Agnihotri</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Contact Content -->
   <section class="content-section">
-    <h1>About Me</h1>
-    <h2>I don’t fit into job descriptions — I redefine them.</h2>
+    <h1>Contact</h1>
+    <h2>Open to Collaborations, Internships, and Ideas That Matter.</h2>
+    <p>If you're building something meaningful in AI/ML or tech — let's connect. I respond quickly, think deeply, and deliver with ownership.</p>
 
-    <div class="animated-card animate__animated animate__fadeInUp">
-      <p>From scraping messy datasets to tuning machine learning models — my work lives at the intersection of <strong>code, context, and courage</strong>.</p>
-      <p>I’ve built systems that detect, predict, recommend, and react — but more importantly, I’ve learned how to think, debug, and de-bias.</p>
+    <div class="contact-links">
+      <p>Email me at:</p>
+      <a href="mailto:agnihotriniti28@gmail.com" class="contact-btn">agnihotriniti28@gmail.com</a>
+
+      <p>View my GitHub profile:</p>
+      <a href="https://github.com/niti2004" class="contact-btn" target="_blank" rel="noopener noreferrer">github.com/niti2004</a>
+
+      <p>Connect on LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/niti-agnihotri-baa93b214/" class="contact-btn" target="_blank" rel="noopener noreferrer">linkedin.com/in/niti-agnihotri</a>
     </div>
+  </section>
 
-    <div class="timeline">
-      <div class="timeline-entry">
-        <h4>2021-2022: Foundations</h4>
-        <p>Mastered Python, Data Structures, and Web Development basics. Started exploring ML and basic models.</p>
-      </div>
-      <div class="timeline-entry">
-        <h4>2023: ML Projects</h4>
-        <p>Built ML systems like Digit Predictor, Spam Detector, and Gharkenushke. Strengthened understanding of NLP and CNNs.</p>
-      </div>
-      <div class="timeline-entry">
-        <h4>2024: Internships & Research</h4>
-        <p>Worked on real-world applications involving AI-driven decision systems, model interpretability, and backend APIs.</p>
-      </div>
-      <div class="timeline-entry">
-        <h4>2025: GenAI & Product Focus</h4>
-        <p>Learning generative AI, fine-tuning LLMs, and building ML products with real impact.</p>
-      </div>
-    </div>
-
-    <div class="animated-card animate__animated animate__fadeInUp">
-      <ul class="about-highlights">
-        <li><strong>ML as Storytelling:</strong> I build ML pipelines like stories — with a beginning, middle, and measurable impact.</li>
-        <li><strong>Before GenAI Hype:</strong> I designed an Ayurvedic recommendation system before ChatGPT could pronounce "turmeric".</li>
-        <li><strong>Failures = Fuel:</strong> I’ve failed models, broken servers, and come out smarter. Every single time.</li>
-      </ul>
-    </div>
-
-    <hr style="border: 0; border-top: 1px solid #333; margin: 2rem 0;" />
-
-    <p>Currently, I'm focused on mastering generative AI, building scalable ML systems, and joining a team that values impact over buzzwords.</p>
-    <p style="font-style: italic; color: #999; margin-top: 2rem;">I’m not just building models. I’m building momentum.</p>
+  <!-- CTA Quote -->
+  <section class="content-section" style="text-align: center; margin-top: 4rem;">
+    <p style="font-size: 1rem; color: #999; font-style: italic;">
+      Let’s build something that matters.
+    </p>
   </section>
 
   <footer>
     &copy; 2025 Niti Agnihotri
   </footer>
 
+  <!-- Hamburger Menu Script -->
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector("nav ul");
+      navList.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
