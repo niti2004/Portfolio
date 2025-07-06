@@ -96,11 +96,24 @@
       animation: fadeIn 1.5s ease-in-out;
     }
 
+    .typewriter-wrapper {
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
     .hero-section h1 {
       font-size: 2.2rem;
       line-height: 1.4;
       color: #E50914;
       margin-bottom: 1.5rem;
+      word-wrap: break-word;
+    }
+
+    #typewriter-text::after {
+      content: '|';
+      animation: blink 1s infinite;
+      color: #E50914;
     }
 
     .hero-section p {
@@ -140,12 +153,6 @@
     .btn-light {
       background: #FFC6C6;
       color: #000;
-    }
-
-    #typewriter-text::after {
-      content: '|';
-      animation: blink 1s infinite;
-      color: #E50914;
     }
 
     .scroll-cue {
@@ -250,7 +257,9 @@
 
   <!-- Hero Section -->
   <header class="hero-section">
-    <h1 class="typewriter" id="typewriter-text">I turn data into intuition. I don’t code models. I craft intelligence.</h1>
+    <div class="typewriter-wrapper">
+      <h1 class="typewriter" id="typewriter-text">I turn data into intuition. I don’t code models. I craft intelligence.</h1>
+    </div>
     <p>I’m <strong>Niti Agnihotri</strong> — an AIML undergrad who doesn’t just run algorithms, but asks the right questions first.</p>
     <div class="cta-buttons">
       <a href="projects.html" class="btn-red">Explore the Work</a>
