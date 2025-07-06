@@ -29,12 +29,30 @@
       padding: 1rem 2rem;
       background: #111;
       flex-wrap: wrap;
+      position: relative;
     }
 
     .logo {
       font-weight: 700;
       font-size: 1.2rem;
       color: #E50914;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: #fff;
+      height: 3px;
+      width: 100%;
+      border-radius: 2px;
+      transition: 0.3s ease;
     }
 
     nav ul {
@@ -165,6 +183,29 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        width: 100%;
+        flex-direction: column;
+        background: #111;
+        display: none;
+        margin-top: 1rem;
+      }
+
+      nav ul.nav-open {
+        display: flex;
+      }
+
+      nav ul li {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    }
+
     @media (max-width: 600px) {
       .content-section h1 {
         font-size: 1.6rem;
@@ -189,7 +230,12 @@
   <!-- Navigation -->
   <nav>
     <div class="logo">Niti Agnihotri</div>
-    <ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html" class="active">Projects</a></li>
@@ -274,5 +320,13 @@
   <footer>
     &copy; 2025 Niti Agnihotri
   </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('nav-open');
+    }
+  </script>
 </body>
 </html>
