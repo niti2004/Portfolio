@@ -44,31 +44,36 @@
       position: relative;
     }
 
-    nav .logo {
+    .logo {
       font-weight: 700;
       font-size: 1.2rem;
       color: #E50914;
-      text-decoration: none;
-      flex: 1;
+      text-align: center;
+      width: 100%;
     }
 
-    nav .menu-toggle {
+    .menu-toggle {
       display: none;
       flex-direction: column;
-      gap: 5px;
+      align-items: center;
+      margin: 0.5rem auto 0;
       cursor: pointer;
     }
 
-    nav .menu-toggle span {
+    .menu-toggle span {
       width: 25px;
       height: 3px;
       background: #E50914;
+      margin: 4px 0;
     }
 
     nav ul {
       display: flex;
-      gap: 1rem;
       list-style: none;
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
       transition: max-height 0.3s ease;
     }
 
@@ -111,12 +116,6 @@
       word-wrap: break-word;
       max-width: 90vw;
       overflow-wrap: break-word;
-    }
-
-    #typewriter-text {
-      display: block;
-      white-space: normal;
-      word-wrap: break-word;
     }
 
     #typewriter-text::after {
@@ -187,28 +186,20 @@
         align-items: center;
       }
 
-      nav .logo {
-        margin-bottom: 0.5rem;
-        text-align: center;
-      }
-
-      nav .menu-toggle {
+      .menu-toggle {
         display: flex;
-        margin: 0.5rem auto;
       }
 
       nav ul {
         flex-direction: column;
+        display: none;
+        align-items: flex-start;
         width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        background: #111;
-        text-align: center;
+        padding-left: 2rem;
       }
 
       nav ul.show {
-        max-height: 300px;
-        margin-top: 0.5rem;
+        display: flex;
       }
 
       .hero-section h1 {
@@ -274,9 +265,14 @@
   <!-- Responsive Menu Script -->
   <script>
     function toggleMenu() {
-      const navList = document.querySelector("nav ul");
-      navList.classList.toggle("show");
+      document.querySelector("nav ul").classList.toggle("show");
     }
+
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.querySelector("nav ul").classList.remove("show");
+      });
+    });
   </script>
 </body>
 </html>
