@@ -97,16 +97,25 @@
     }
 
     .typewriter-wrapper {
-      display: inline-block;
-      max-width: 100%;
-      overflow-wrap: break-word;
+      display: block;
+      width: 100%;
+      max-width: 90vw;
+      text-align: center;
     }
 
     .hero-section h1 {
-      font-size: 2.2rem;
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
       line-height: 1.4;
       color: #E50914;
       margin-bottom: 1.5rem;
+      word-wrap: break-word;
+      max-width: 90vw;
+      overflow-wrap: break-word;
+    }
+
+    #typewriter-text {
+      display: block;
+      white-space: normal;
       word-wrap: break-word;
     }
 
@@ -216,7 +225,8 @@
       }
 
       .hero-section h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        padding: 0 1rem;
       }
 
       .hero-section p {
@@ -258,7 +268,9 @@
   <!-- Hero Section -->
   <header class="hero-section">
     <div class="typewriter-wrapper">
-      <h1 class="typewriter" id="typewriter-text">I turn data into intuition. I don’t code models. I craft intelligence.</h1>
+      <h1 class="typewriter" id="typewriter-text">
+        I turn data into intuition. I don’t code models. I craft intelligence.
+      </h1>
     </div>
     <p>I’m <strong>Niti Agnihotri</strong> — an AIML undergrad who doesn’t just run algorithms, but asks the right questions first.</p>
     <div class="cta-buttons">
