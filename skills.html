@@ -21,19 +21,40 @@
       padding: 1rem 2rem;
       background: #111;
       flex-wrap: wrap;
+      position: relative;
     }
 
     .logo {
       font-weight: 700;
       font-size: 1.2rem;
       color: #E50914;
+      text-align: center;
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin: 0.5rem auto 0;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
     }
 
     nav ul {
       display: flex;
       list-style: none;
       gap: 1rem;
+      justify-content: center;
+      width: 100%;
       flex-wrap: wrap;
+      transition: max-height 0.3s ease;
     }
 
     nav ul li a {
@@ -121,7 +142,26 @@
       color: #aaa;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        align-items: flex-start;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
       h1 {
         font-size: 1.6rem;
       }
@@ -150,6 +190,11 @@
   <!-- Navigation -->
   <nav>
     <div class="logo">Niti Agnihotri</div>
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -243,5 +288,17 @@
     &copy; 2025 Niti Agnihotri
   </footer>
 
+  <!-- Menu Script -->
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav ul').classList.toggle('show');
+    }
+
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.querySelector("nav ul").classList.remove("show");
+      });
+    });
+  </script>
 </body>
 </html>
