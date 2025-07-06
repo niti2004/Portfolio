@@ -20,7 +20,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     * {
       box-sizing: border-box;
@@ -93,7 +93,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 120px);
+      min-height: calc(100vh - 120px);
       max-width: 900px;
       margin: auto;
       text-align: center;
@@ -102,10 +102,12 @@
     }
 
     .typewriter-wrapper {
-      display: block;
       width: 100%;
       max-width: 90vw;
+      margin: 0 auto;
       text-align: center;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
     .hero-section h1 {
@@ -113,9 +115,7 @@
       line-height: 1.4;
       color: #E50914;
       margin-bottom: 1.5rem;
-      word-wrap: break-word;
-      max-width: 90vw;
-      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     #typewriter-text::after {
